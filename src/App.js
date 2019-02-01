@@ -1,26 +1,23 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import userData from './userData'
 
 class App extends Component {
   render() {
+    console.log('userData', userData)
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+        <div style={{display: 'flex', flexWrap: 'wrap'}}>
+          {userData.userData.map((user) => {
+            return (
+              <div style = {{height: '250px', width: '275px', backgroundColor: 'blue', color: 'white', display: 'flex', flexDirection: 'column', alignContent: 'center', justifyItems: 'center', margin: '10px', flexWrap: 'wrap'}}>
+                <h1>{user.name}</h1>
+                <h3>{user.age}</h3>
+                <h3>{user.email}</h3>
+              </div>
+            )
+          })}
+        </div>
       </div>
     );
   }

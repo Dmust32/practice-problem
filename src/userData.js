@@ -1,4 +1,4 @@
-export default userData = [
+export default {userData : [
     {
         name: 'Tom Smith',
         age: 32,
@@ -30,4 +30,4 @@ export default userData = [
         email: 'cBonner@gmail.com'
     },
 
-]
+]}
